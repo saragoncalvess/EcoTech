@@ -9,8 +9,21 @@ import styles from './style'
 import landingImage from './../../assets/images/image-landing.png'
 import mouseIcon from './../../assets/images/icons/mouse.png'
 import { FontAwesome } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native'
 
 function Landing() {
+
+    const { navigate } = useNavigation()
+
+    // Navegará para a tela de Postos de Coleta //
+    function navigateToMap() {
+        navigate('MapPoints')
+    }
+
+    // Navegará para a tela de Postos de Coleta //
+    function navigateToInfo() {
+        navigate('Info')
+    }
 
     return (
         <View style={styles.container}>
@@ -32,12 +45,12 @@ function Landing() {
 
             <View style={styles.buttonGroup}>
 
-                <TouchableOpacity style={[styles.buttons, styles.buttonInfo]}>
+                <TouchableOpacity style={[styles.buttons, styles.buttonInfo]} onPress={navigateToInfo}>
                     <Text style={[styles.buttonText, styles.buttonTextInfo]}>Informações</Text>
                     <FontAwesome name='info-circle' size={45} color={"#A5E198"} />
                 </TouchableOpacity>
 
-                <TouchableOpacity style={[styles.buttons, styles.buttonMap]}>
+                <TouchableOpacity style={[styles.buttons, styles.buttonMap]} onPress={navigateToMap}>
                     <Text style={[styles.buttonText, styles.buttonTextMap]} >Postos de Coleta</Text>
                     <FontAwesome name='map' size={45} color={"#FFB8B4"} />
                 </TouchableOpacity>
