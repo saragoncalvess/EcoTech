@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     },
 
     slogan:{
-        fontFamily: "BalsamiqSans_400Regular",
+        fontFamily: "BalsamiqSans_700Bold",
         fontSize: 11
     },
 
@@ -55,7 +55,8 @@ const styles = StyleSheet.create({
     },
 
     buttons: {
-        marginHorizontal: 20,
+        marginHorizontal: 10,
+        padding: 4,
         height: 150,
         width: 150,
         borderRadius: 8,
@@ -77,7 +78,7 @@ const styles = StyleSheet.create({
 
     buttonText: {
         fontFamily: "BalsamiqSans_700Bold",
-        fontSize: 20,
+        fontSize: 22,
         textAlign: "center",
     },
 

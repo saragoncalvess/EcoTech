@@ -3,7 +3,7 @@ import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 
 // Páginas / Componentes //
-import Landing from '../components/Landing'
+import Landing from './../pages/Landing'
 
 const { Navigator, Screen } = createStackNavigator()
 
