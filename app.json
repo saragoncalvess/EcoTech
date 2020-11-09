@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "EcoTech",
+    "slug": "EcoTech",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "splash": {
+      "image": "./src/assets/images/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#96DCB2"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+  }
+}
