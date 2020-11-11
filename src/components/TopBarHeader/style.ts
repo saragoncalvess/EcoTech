@@ -1,9 +1,17 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
+
+const { width } = Dimensions.get('window')
 
 const styles = StyleSheet.create({
-    header:{
-        width: "100%",
-        height: 80,
+
+    container: {
+        justifyContent: 'space-between',
+        alignItems: "center",
+        width: width,
+        height: 80
+    },
+
+    header: {
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "flex-end",
@@ -12,9 +20,10 @@ const styles = StyleSheet.create({
         backgroundColor: "#7FBA95",
         borderBottomColor: '#6EAB85',
         borderBottomWidth: 1,
+        flex: 1
     },
 
-    headerText:{
+    headerText: {
         fontFamily: 'Signika_700Bold',
         color: "#2A6E37",
         fontSize: 18,

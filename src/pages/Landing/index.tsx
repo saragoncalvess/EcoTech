@@ -31,7 +31,7 @@ function Landing() {
                 <Image source={landingImage} resizeMode='contain' style={styles.image} />
 
                 <View style={styles.logo}>
-                    <Text style={{ color: "#3B9945", fontWeight: 'bold', fontSize: 30 }}>ECHO</Text>
+                    <Text style={{ color: "#3B9945", fontWeight: 'bold', fontSize: 30 }}>ECO</Text>
                     <Text style={{ color: "#000", fontWeight: 'bold', fontSize: 30 }}>TECH</Text>
                     <Image source={mouseIcon} style={styles.mouseIcon} resizeMode='contain' />
                 </View>

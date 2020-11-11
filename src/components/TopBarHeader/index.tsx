@@ -16,15 +16,19 @@ const TopBarHeader: React.FC<TopBarHeaderProps> = ({ title }) => {
 
     return (
 
-        <View style={styles.header}>
+        <View style={styles.container}>
 
-            <TouchableOpacity>
-                <FontAwesome name='arrow-left' size={26} color={"#2A6E37"} />
-            </TouchableOpacity>
+            <View style={styles.header}>
 
-            <Text style={styles.headerText}>{title}</Text>
+                <TouchableOpacity>
+                    <FontAwesome name='arrow-left' size={22} color={"#2A6E37"} />
+                </TouchableOpacity>
 
-            <Text>ECOTECH</Text>
+                <Text style={styles.headerText}>{title}</Text>
+
+                <Text>ECOTECH</Text>
+
+            </View>
 
         </View>
 
