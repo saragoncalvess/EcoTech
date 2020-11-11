@@ -7,11 +7,11 @@ const styles = StyleSheet.create({
     container: {
         justifyContent: 'space-between',
         alignItems: "center",
-        width: width,
         height: 80
     },
 
     header: {
+        width: width,
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "flex-end",

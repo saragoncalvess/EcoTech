@@ -90,38 +90,7 @@ function MapPoints() {
 
             </MapView>
 
-            <ScrollView
-                horizontal={true}
-                style={styles.scrollViewContainer}
-                showsHorizontalScrollIndicator={false}
-                pagingEnabled
-            >
 
-                <View style={{
-                    width: Dimensions.get('window').width - 0,
-                    height: 100,
-                    backgroundColor: '#00A',
-                    maxHeight: 200
-                }}>
-                </View>
-
-                <View style={{
-                    width: Dimensions.get('window').width - 0,
-                    height: 100,
-                    backgroundColor: '#A00',
-                    maxHeight: 200
-                }}>
-                </View>
-
-                <View style={
-                    {
-                        width: Dimensions.get('window').width - 0,
-                        height: 100, backgroundColor: '#0A0',
-                        maxHeight: 200
-                    }}>
-                </View>
-
-            </ScrollView>
         </View >
     )
 }
