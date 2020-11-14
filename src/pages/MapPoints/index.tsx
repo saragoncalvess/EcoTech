@@ -50,7 +50,8 @@ function MapPoints() {
 
                         setLocation((oldLocation: any) => [...oldLocation, {
                             latitude: data.results[0].geometry.location.lat,
-                            longitude: data.results[0].geometry.location.lng
+                            longitude: data.results[0].geometry.location.lng,
+                            id: e.id
                         }])
                     })
             })
@@ -84,7 +85,7 @@ function MapPoints() {
                         return <Marker
                             coordinate={place}
                             key={index}
-                            title={Address[index].name}
+                            title={Address[place.id].name}
                         />
                     })
                 }
