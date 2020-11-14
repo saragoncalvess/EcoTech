@@ -11,7 +11,12 @@ interface InfoItemProp {
     name: string,
     description: string,
     phone: string,
-    address: string,
+    address: {
+        street: string,
+        neighborhood: string,
+        number: number,
+        city: string
+    },
     from: string,
     to: string
 }
@@ -19,33 +24,36 @@ interface InfoItemProp {
 const InfoItem: React.FC<InfoItemProp> = ({ name, description, phone, address, from, to }) => {
     return (
         <View style={styles.box}>
-            <Text style={styles.titleBox}>Dados do Posto de Coleta</Text>
+
+            <View style={styles.titleBox}>
+                <Text style={styles.titleText}>{name}</Text>
+                <FontAwesome name="recycle" size={18} color={'#A8D2FF'} />
+            </View>
 
             <View style={styles.info}>
 
                 <View style={styles.lineData}>
-                    <FontAwesome name='building' size={15} color={"#4D6953"} />
-                    <Text style={styles.infoText}>{name}</Text>
-                </View>
-
-                <View style={styles.lineData}>
-                    <FontAwesome name='building' size={15} color={"#4D6953"} />
+                    <FontAwesome name='id-card' size={15} color={"#4D6953"} />
                     <Text style={styles.infoText}>{description}</Text>
                 </View>
 
                 <View style={styles.lineData}>
-                    <FontAwesome name='building' size={15} color={"#4D6953"} />
+                    <FontAwesome name='phone' size={15} color={"#4D6953"} />
                     <Text style={styles.infoText}>{phone}</Text>
                 </View>
 
                 <View style={styles.lineData}>
-                    <FontAwesome name='building' size={15} color={"#4D6953"} />
-                    <Text style={styles.infoText}>{address}</Text>
+                    <FontAwesome name='map-marker' size={15} color={"#4D6953"} />
+                    <Text style={styles.infoText}>
+                        {
+                            `${address.street} - ${address.number} - ${address.neighborhood} - ${address.city}`
+                        }
+                    </Text>
                 </View>
 
                 <View style={styles.lineData}>
-                    <FontAwesome name='building' size={15} color={"#4D6953"} />
-                    <Text style={styles.infoText}>{`Horário: ${from} - ${to}`}</Text>
+                    <FontAwesome name='calendar' size={15} color={"#4D6953"} />
+                    <Text style={styles.infoText}>{`Horário: ${from}h - ${to}h`}</Text>
                 </View>
 
             </View>
