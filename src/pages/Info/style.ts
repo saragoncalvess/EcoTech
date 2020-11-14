@@ -14,9 +14,9 @@ const styles = StyleSheet.create({
     },
 
     recycleIcon: {
-        width: 100,
-        height: 100,
-        marginLeft: 5
+        width: 175,
+        height: 175,
+        marginLeft: 5,
     },
 
     title: {
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: 'center',
         padding: 12,
-        marginTop: 40
+        marginTop: 30
     },
 
     buttons: {
