@@ -6,7 +6,7 @@ O app foi desenvolvidos com:
 - [TypeScript](https://www.typescriptlang.org/)
 
 # ♻ Projeto
-O Ecotech é um para coleta de lixo eletrônico.
+O Ecotech é um app para coleta de lixo eletrônico.
 
 # 📱 Layout
 No link abaixo você encontra o layout do projeto mobile. Caso você não tenha uma conta no [figma](https://www.figma.com/), é necessário se cadastrar para conseguir aceesá-lo.
