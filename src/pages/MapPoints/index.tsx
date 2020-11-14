@@ -116,7 +116,7 @@ function MapPoints() {
                     // Carrega os dados do posto de coleta //
                     Address.map((place: any, index: number) => {
                         return (
-                            <InfoItem 
+                            <InfoItem
                                 key={place.id}
                                 name={place.name}
                                 description={place.description}
@@ -133,7 +133,13 @@ function MapPoints() {
                         )
                     })
                 }
+
             </ScrollView>
+
+            <View style={styles.toScroll}>
+                <Text style={styles.scrollText}>{`<<  Deslizar  >>`}</Text>
+            </View>
+            
         </View >
     )
 }

@@ -44,9 +44,18 @@ const styles = StyleSheet.create({
     scrollViewContainer: {
         position: "absolute",
         bottom: 40,
+    },
+
+    toScroll:{
+        position: "absolute",
+        bottom: 15,
+        left: 145
+    },
+
+    scrollText:{
+        fontFamily: "BalsamiqSans_700Bold",
+        color: '#4A89CC'
     }
-
-
 
 })
 
