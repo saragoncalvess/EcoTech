@@ -50,7 +50,8 @@ function MapPoints() {
 
                         setLocation((oldLocation: any) => [...oldLocation, {
                             latitude: data.results[0].geometry.location.lat,
-                            longitude: data.results[0].geometry.location.lng
+                            longitude: data.results[0].geometry.location.lng,
+                            id: e.id
                         }])
                     })
             })
@@ -83,8 +84,8 @@ function MapPoints() {
                     location.map((place: any, index: number) => {
                         return <Marker
                             coordinate={place}
-                            key={index}
-                            title={Address[index].name}
+                            key={`marker-${index}`}
+                            title={Address[place.id].name}
                         />
                     })
                 }
@@ -113,22 +114,22 @@ function MapPoints() {
             >
 
                 {
-                    // Carrega os dados do posto de coleta //
-                    Address.map((place: any, index: number) => {
+                    // Carrega os dados do posto de coleta//
+                    location.map((place : any, index: number) =>{
                         return (
                             <InfoItem
-                                key={place.id}
-                                name={place.name}
-                                description={place.description}
-                                phone={place.phone}
+                                key={`info-${index}`}
+                                name={Address[place.id].name}
+                                description={Address[place.id].description}
+                                phone={Address[place.id].phone}
                                 address={{
-                                    street: place.local.street,
-                                    number: place.local.number,
-                                    neighborhood: place.local.neighborhood,
-                                    city: place.local.city
+                                    street: Address[place.id].local.street,
+                                    number: Address[place.id].local.number,
+                                    neighborhood: Address[place.id].local.neighborhood,
+                                    city: Address[place.id].local.city
                                 }}
-                                from={place.from}
-                                to={place.to}
+                                from={Address[place.id].from.toString()}
+                                to={Address[place.id].to.toString()}
                             />
                         )
                     })
